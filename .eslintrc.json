@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "env": {
+    "mocha": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 9
+  },
+  "extends": ["eslint:recommended"],
+  "rules": {
+    "no-console": 0
+  }
+}

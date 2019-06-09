@@ -1,0 +1,26 @@
+{
+  "name": "cache-that",
+  "version": "0.0.1",
+  "description": "Simple cache service on server side",
+  "main": "dist/CacheThat.cjs.js",
+  "module": "dist/CacheThat.esm.js",
+  "scripts": {
+    "test": "mocha -r esm -t 5000",
+    "build": "rimraf ./dist/** && rollup -c",
+    "prepack": "npm run build"
+  },
+  "author": "Wen Wei , Chang",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "esm": "^3.2.25",
+    "mocha": "^6.1.4",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.14.5",
+    "rollup-plugin-babel": "^4.3.2",
+    "terser": "^4.0.0"
+  }
+}
