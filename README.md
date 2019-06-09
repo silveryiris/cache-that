@@ -1,6 +1,6 @@
 # cache-that
 
-![dev packages](https://david-dm.org/silveryiris/cache-that.svg)
+[![dev packages](https://david-dm.org/silveryiris/cache-that.svg)](https://david-dm.org/silveryiris/cache-that?type=dev)
 
 
 - Simple node server side cache for small project or tests.
