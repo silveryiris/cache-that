@@ -48,9 +48,7 @@ class CacheThat {
   }
 
   clear() {
-    for (const key of this.storage.keys()) {
-      this.removeItem(key)
-    }
+    this.storage = new Map()
   }
 
   countItems() {
