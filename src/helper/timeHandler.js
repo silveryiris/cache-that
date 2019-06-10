@@ -4,14 +4,12 @@ function timeHandler(time) {
       throw new Error(`CacheThat => Paramter of expired time ( ${time} ) is invaild!`)
     }
     return time
-  }
- 
-  else if (typeof time === "string") {
-    const regexForTime = /^[1-9]\d+/
-    const regexForSeconds = /^[1-9][0-9]+[sS]$/
-    const regexForMinutes = /^[1-9][0-9]+[mM]$/
-    const regexForHours = /^[1-9][0-9]+[hH]$/
-    const regexForDays = /^[1-9][0-9]+[dD]$/
+  } else if (typeof time === "string") {
+    const regexForTime = /^[1-9]\d+$/
+    const regexForSeconds = /^[1-9]+[0-9]*[sS]$/
+    const regexForMinutes = /^[1-9]+[0-9]*[mM]$/
+    const regexForHours = /^[1-9]+[0-9]*[hH]$/
+    const regexForDays = /^[1-9]+[0-9]*[dD]$/
 
     if (regexForTime.test(time)) {
       return parseInt(time)
