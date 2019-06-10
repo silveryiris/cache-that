@@ -19,7 +19,7 @@ npm i cache-that
 ````javascript
 
 import CacheThat from "cache-that"
-const cahce = new CacheThat()
+const cache = new CacheThat()
 
 const testData =  { message: "Hi there" }
 
@@ -38,7 +38,7 @@ Default data keep time is forever, but you can modify this by class constructor 
 import CacheThat from "cache-that"
 
 // Give default data expired time (milliseconds)
-const cahce = new CacheThat(5566000)
+const cache = new CacheThat(5566000)
 
 cache.setItem("foo", "Will clear the item after 5566 seconds by default.")
 
