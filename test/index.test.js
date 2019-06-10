@@ -1,5 +1,23 @@
 import CacheThat from "../src/CacheThat.js"
+import CacheThatCJS from "../dist/CacheThat.cjs.js"
+import CacheThatESM from "../dist/CacheThat.esm.js"
 import { expect } from "chai"
+
+describe("Test cjs version distribution", () => {
+  it("Can save items", () => {
+    const cache = new CacheThatCJS("1m")
+    cache.setItem("test", {})
+    cache.clear()
+  })
+})
+
+describe("Test esm version distribution", () => {
+  it("Can save items", () => {
+    const cache = new CacheThatESM("1m")
+    cache.setItem("test", {})
+    cache.clear()
+  })
+})
 
 describe("Cache to system memory", () => {
   it("Can save items", () => {
