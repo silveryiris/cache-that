@@ -1,6 +1,6 @@
 {
   "name": "cache-that",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple cache service on server side",
   "main": "dist/CacheThat.cjs.js",
   "module": "dist/CacheThat.esm.js",
