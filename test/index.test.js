@@ -9,6 +9,17 @@ describe("Test cjs version distribution", () => {
     cache.setItem("test", {})
     cache.clear()
   })
+
+  it("Can delete item by key", () => {
+    const cache = new CacheThatCJS()
+
+    const key = "test1"
+    cache.setItem(key, "forever")
+    cache.removeItem(key)
+    const counts = cache.countItems()
+
+    expect(counts).equal(0)
+  })
 })
 
 describe("Test esm version distribution", () => {
@@ -17,11 +28,22 @@ describe("Test esm version distribution", () => {
     cache.setItem("test", {})
     cache.clear()
   })
+
+  it("Can delete item by key", () => {
+    const cache = new CacheThatESM()
+
+    const key = "test1"
+    cache.setItem(key, "forever")
+    cache.removeItem(key)
+    const counts = cache.countItems()
+
+    expect(counts).equal(0)
+  })
 })
 
 describe("Cache to system memory", () => {
   it("Can save items", () => {
-    const cache = new CacheThat()
+    const cache = new CacheThat("1m")
     const key = "test"
     const value = "Happy Ever After."
     cache.setItem(key, value)
@@ -32,7 +54,7 @@ describe("Cache to system memory", () => {
   })
 
   it("Can delete item by key", () => {
-    const cache = new CacheThat()
+    const cache = new CacheThat(5566)
 
     const key = "test1"
     cache.setItem(key, "forever")
