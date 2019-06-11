@@ -2,9 +2,9 @@
 
 [![dev packages](https://david-dm.org/silveryiris/cache-that.svg)](https://david-dm.org/silveryiris/cache-that?type=dev)
 
-- Save data on memory.
+- Save data on the RAM.
 
-- The data size and quantities that can save on memory is not well tested yet. 
+- The data size and quantities that can save on RAM is not well tested yet. 
 
 - Simple node server side cache for small project or tests.
 
