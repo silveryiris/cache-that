@@ -2,6 +2,10 @@
   "name": "cache-that",
   "version": "0.0.3",
   "description": "Simple cache service on server side",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/silveryiris/cache-that.git"
+  },
   "main": "dist/CacheThat.cjs.js",
   "module": "dist/CacheThat.esm.js",
   "scripts": {
@@ -19,7 +23,7 @@
     "esm": "^3.2.25",
     "mocha": "^6.1.4",
     "rimraf": "^2.6.3",
-    "rollup": "^1.15.0",
+    "rollup": "^1.15.4",
     "rollup-plugin-babel": "^4.3.2",
     "terser": "^4.0.0"
   }
