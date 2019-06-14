@@ -122,6 +122,5 @@ npm test
 ````
 
 # License
-Copyright (c) 2019 Wen-Wei Chang, contributors.
 
-Released under the ISC license.
+See [license file.](https://github.com/silveryiris/cache-that/blob/master/LICENSE)
