@@ -1,6 +1,6 @@
 {
   "name": "cache-that",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Simple cache service on server side",
   "repository": {
     "type": "git",
