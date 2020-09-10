@@ -1,6 +1,6 @@
 // Only out put CommonJS and ES module for node and bundlers.
 import meta from "./package.json"
-import babel from "rollup-plugin-babel"
+import babel from "@rollup/plugin-babel"
 import { minify } from "terser"
 
 function compressor(options = { compress: true, mangle: true }) {
@@ -8,14 +8,17 @@ function compressor(options = { compress: true, mangle: true }) {
     name: "terser",
     renderChunk(source) {
       return minify(source, options)
-    }
+    },
   }
 }
 
 export default [
   {
     input: "src/CacheThat.js",
-    output: [{ file: meta.main, format: "cjs" }, { file: meta.module, format: "es" }],
-    plugins: [babel({ exclude: ["node_modules/**"] }), compressor()]
-  }
+    output: [
+      { file: meta.main, format: "cjs" },
+      { file: meta.module, format: "es" },
+    ],
+    plugins: [babel({ babelHelpers: "bundled", exclude: ["node_modules/**"] }), compressor()],
+  },
 ]

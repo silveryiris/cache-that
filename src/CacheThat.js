@@ -5,7 +5,7 @@ class CacheThat {
   constructor(expiredTime = false) {
     this.storage = new Map()
     this.defaultExpiredTime = expiredTime === false ? false : timeHandler(expiredTime)
-    this.expireCacheHandler = key => {
+    this.expireCacheHandler = (key) => {
       this.removeItem(key)
     }
   }
